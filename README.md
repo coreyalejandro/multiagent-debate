@@ -249,6 +249,29 @@ agents:
 
 ⸻
 
+🖥️ Web UI
+
+The project includes both Gradio and Streamlit web interfaces for easy interaction:
+
+**Quick Start:**
+```bash
+# Interactive launcher (choose Gradio or Streamlit)
+python run_ui.py
+
+# Or launch directly:
+python gradio_ui.py      # Gradio interface at http://localhost:7860
+python streamlit_ui.py   # Streamlit interface at http://localhost:8501
+```
+
+**UI Features:**
+ • 🎛️ Interactive Configuration: Set debate parameters through web forms
+ • 🤖 Agent Selection: Choose from available debate agents  
+ • 📊 Real-time Results: View debate outcomes with formatted output
+ • 💾 Export Options: Download results as JSON or view raw data
+ • 🔒 Secure API Key: Enter OpenAI API key securely (not stored)
+
+⸻
+
 🧩 Testing
 
 Run a simple test to confirm install:
