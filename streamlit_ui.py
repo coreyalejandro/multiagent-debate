@@ -11,7 +11,8 @@ from typing import Dict, Any
 # Import the debate system components
 from src.ma_debate.cli import build_agents, llm_factory, judge_factory
 from src.ma_debate.debate import Debate
-from src.ma_debate.storage import JSONLRunLogger, make_run_id
+from src.ma_debate.storage import JSONLRunLogger
+from src.ma_debate.utils import make_run_id
 
 
 def run_debate(
