@@ -82,7 +82,8 @@ def run_debate(
 def display_results(result: Dict[str, Any]):
     """Display debate results in Streamlit"""
     
-    if not result:
+    # Check if result is valid and not empty
+    if not result or not isinstance(result, dict):
         return
     
     st.success("✅ Debate completed successfully!")
@@ -189,7 +190,8 @@ def main():
                 api_key=api_key
             )
             
-            if result:
+            # Only display results if we got a valid dict with data
+            if result and isinstance(result, dict) and result:
                 display_results(result)
     
     # Example questions section
