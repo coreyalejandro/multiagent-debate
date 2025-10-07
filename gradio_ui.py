@@ -34,13 +34,13 @@ class DebateUI:
         """Run the debate and return formatted results"""
         
         if not question.strip():
-            return "❌ Please enter a question for the debate.", "", ""
+            return "❌ Please enter a question for the debate.", "{}", ""
             
         if not agents.strip():
-            return "❌ Please specify at least one agent.", "", ""
+            return "❌ Please specify at least one agent.", "{}", ""
             
         if not api_key.strip():
-            return "❌ Please enter your OpenAI API key.", "", ""
+            return "❌ Please enter your OpenAI API key.", "{}", ""
         
         try:
             # Set the API key
@@ -86,7 +86,7 @@ class DebateUI:
             
         except Exception as e:
             error_msg = f"❌ Error running debate: {str(e)}"
-            return error_msg, "", error_msg
+            return error_msg, "{}", error_msg
     
     def _format_console_output(self, result: Dict[str, Any]) -> str:
         """Format the result for console-like display"""
